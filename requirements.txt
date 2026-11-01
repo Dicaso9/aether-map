@@ -1,5 +1,7 @@
 pillow
 discord.py>=2.3.0
 requests>=2.28.0
-numpy>=1.23
-scipy>=1.9
+# NumPy 2.4+ wheels require x86-64-v2, which is unavailable on older CPUs.
+# NumPy 2.3.x provides Python 3.14 wheels using the x86-64 baseline.
+numpy>=2.3,<2.4
+scipy>=1.16,<1.17

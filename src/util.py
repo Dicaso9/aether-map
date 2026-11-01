@@ -9,7 +9,7 @@ tile_size = 16
 map_size = 151
 class map_data:
 
-    def __init__(self, map_json_path='https://forest1.aetherkingdoms.com/api/public/mapExport.json'):
+    def __init__(self, map_json_path='https://hills1.aetherkingdoms.com/api/public/mapExport.json'):
         self.maps_json = self.get_maps_json(map_json_path)
         self.tile_types = { tile["type"] : tile for tile in self.maps_json["tiles"] }
         self.tiles_dict = { (tile['x'], tile['y']): tile for tile in self.maps_json["map"] }
@@ -51,4 +51,4 @@ class map_data:
 
         return maps
 
-map_data_instance = map_data('https://forest1.aetherkingdoms.com/api/public/mapExport.json')
+map_data_instance = map_data('https://hills1.aetherkingdoms.com/api/public/mapExport.json')
